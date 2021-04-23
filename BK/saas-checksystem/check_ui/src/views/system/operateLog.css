@@ -1,0 +1,24 @@
+.operateLogContainer {
+  padding: 20px;
+}
+.operateLogFormContent {
+  padding: 20px;
+  background: #ffffff;
+  margin-bottom: 20px;
+}
+.operateLogTableContent {
+  padding: 20px;
+  background: #ffffff;
+}
+
+.dialogContent {
+  padding: 20px;
+}
+
+/*设置UI内部组件样式*/
+.bk-form-item {
+  margin: 0 8px 8px 0 !important;
+}
+/deep/.bk-form.bk-inline-form .bk-form-item .bk-label {
+  width: 80px !important;
+}

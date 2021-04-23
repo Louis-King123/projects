@@ -1,0 +1,203 @@
+{% include 'index.html' %}
+{% block content %}
+{% verbatim %}
+<div id="app" style="width:1366px; margin: 20px auto 0 auto;">
+    <bk-form form-type="inline">
+        <bk-form-item label="选择业务">
+            <bk-select :disabled="false" v-model="formData.biz_id" style="width: 250px;"
+                       ext-cls="select-custom"
+                       ext-popover-cls="select-popover-custom"
+                       searchable>
+                <bk-option v-for="option in bus_list"
+                           :key="option.bk_biz_id"
+                           :id="option.bk_biz_id"
+                           :name="option.bk_biz_name">
+                </bk-option>
+            </bk-select>
+        </bk-form-item>
+        <bk-form-item label="选择时间">
+
+            <bk-date-picker
+                      style="width: 290px;"
+                      @change="ChangeTime"
+                      :placeholder="'选择日期范围'"
+                      :type="'datetimerange'">
+                    </bk-date-picker>
+        </bk-form-item>
+        <bk-form-item>
+            <bk-button theme="primary" @click="search_history_info">查询历史记录</bk-button>
+        </bk-form-item>
+    </bk-form>
+
+    <bk-table style="margin-top:15px;" :data="history_list" :pagination="pagination"
+            @page-change="handlePageChange" @page-limit-change="handlePageLimitChange">
+        <bk-table-column prop="biz_id" label="业务"></bk-table-column>
+        <bk-table-column prop="tmp_id" label="模版ID"></bk-table-column>
+        <bk-table-column prop="inst_id" label="作业ID"></bk-table-column>
+        <bk-table-column prop="inst_status" label="作业状态">
+            <template slot-scope="scope">
+                {{ scope.row.inst_status | filter_inst_status }}
+            </template>
+        </bk-table-column>
+        <bk-table-column prop="inst_finish" label="是否完成">
+             <template slot-scope="scope">
+                {{ scope.row.inst_finish | filter_inst_finish }}
+            </template>
+        </bk-table-column>
+        <bk-table-column prop="created_time" label="时间" sortable></bk-table-column>
+        <bk-table-column prop="logs" label="日志" width="400">
+            <template slot-scope="scope">
+                <bk-button @click="clickLog(scope.row.id, option.ip, option)" :theme="'primary'" class="mr10" v-for="option in scope.row.logs">
+                    <span>{{ option.ip }}</span>
+                </bk-button>
+            </template>
+        </bk-table-column>
+    </bk-table>
+    <bk-dialog v-model="visible" width="600"
+        :title=dialogTittle>
+            <div style="height: 200px;overflow: auto;float: left;width: 250px;margin-left: 20px;background-color: #0f0f0f;color: white;margin-right: 10px">
+                <div>%CPU</div>
+                <div v-for="option in cpu_content">{{ option }}</div>
+            </div>
+            <div style="height: 200px;overflow: auto;width: 250px;margin-left: 20px;background-color: #0f0f0f;color: white">
+                <div>%TOP 10</div>
+                <div v-for="option in top_content">{{ option }}</div>
+            </div>
+
+    </bk-dialog>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% block script %}
+<script>
+
+    window.onload = function () {
+
+        document.getElementById('historyPage').setAttribute("class", "active");
+        document.getElementById('indexPage').setAttribute("class", "");
+
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    // 业务
+                    bus_value:"",
+                    bus_list: [],
+                    // 主机列表
+                    history_list:[],
+                    // 选中主机
+                    host:[],
+                    visible: false,
+                    dialogTittle: '',
+                    cpu_content: 'cpu_content',
+                    top_content: 'top_content',
+                    pagination: {
+                        current: 1,
+                        count: 0,
+                        limit: 10
+                    },
+                    formData: {
+                    'biz_id': '',
+                    'start_time': '',
+                    'end_time': ''
+                    }
+                }
+            },
+            filters: {
+                filter_inst_status (arg) {
+                    if (arg === 1){
+                        return '已提交'
+                    }
+                    if (arg === 2){
+                        return '执行失败'
+                    }
+                    if (arg === 3){
+                        return '执行成功'
+                    }
+                },
+                filter_inst_finish (arg) {
+                    if (arg === false){
+                        return '查询中'
+                    }
+                    if (arg === true){
+                        return '已完成'
+                    }
+
+                }
+            },
+            mounted() {
+                this.Business();
+                this.historyList();
+            },
+            methods: {
+                // 获取业务
+                Business() {
+                    axios({
+                        url: site_url + "business",
+                        method: 'GET'
+                    }).then(res => {
+                        this.bus_list = res.data['data']
+                    })
+                },
+
+                historyList() {
+                    axios({
+                        url: site_url + "history_info",
+                        method: 'GET'
+                    }).then(res => {
+                        this.pagination.count = res.data['data']['count']
+                        this.history_list = res.data['data']['data']
+                    })
+                },
+                // 查询
+                search_history_info () {
+                    const { current, limit } = this.pagination;
+                    const { biz_id, start_time, end_time } = this.formData;
+                    const params = {
+                        biz_id,
+                        start_time,
+                        end_time,
+                        current,
+                        limit
+                    };
+                    axios({
+                        url: site_url + "search_history_info",
+                        method: 'GET',
+                        params:params
+                    }).then(res => {
+                        this.pagination.count = res.data['data']['count']
+                        this.history_list = res.data['data']['data']
+                    })
+                },
+
+               clickLog(id, ip, obj){
+                   this.dialogTittle = ip + '日志'
+                   const con = obj.content.split("&&")
+                   this.cpu_content = con[0].split('\n')
+                   this.top_content = con[1].split('\n')
+                   this.visible = true
+               },
+                ChangeTime (date, type) {
+                    this.formData.start_time = date[0]
+                    this.formData.end_time = date[1]
+                },
+                handlePageChange (current) {
+                    this.pagination.current = current
+                    //    调用接口
+                    this.search_history_info()
+                },
+                handlePageLimitChange (limit) {
+                    this.pagination.current = 1
+                    this.pagination.limit = limit
+                    //    调用接口
+                    this.search_history_info()
+
+                }
+            }
+        })
+    }
+</script>
+{% endblock %}
+
+

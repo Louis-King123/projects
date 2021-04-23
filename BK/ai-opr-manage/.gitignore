@@ -1,0 +1,5 @@
+venv/
+.idea
+__pycache__/
+operate_manage_platform/local_settings.py
+

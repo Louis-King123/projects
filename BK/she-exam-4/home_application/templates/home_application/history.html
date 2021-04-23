@@ -1,0 +1,62 @@
+{% include 'index.html' %}
+{% block content %}
+{% verbatim %}
+<div id="app" style="width:1366px; margin: 20px auto 0 auto;">
+
+    <bk-table style="margin-top:15px;" :data="history_list" border>
+        <bk-table-column type="index" label="序号" width="60"></bk-table-column>
+        <bk-table-column prop="ip" label="IP"></bk-table-column>
+        <bk-table-column prop="file_list" label="文件列表"></bk-table-column>
+        <bk-table-column prop="file_count" label="文件数量"></bk-table-column>
+        <bk-table-column prop="file_size" label="文件大小">
+            <template slot-scope="scope">
+                {{ scope.row.file_size }}M
+            </template>
+        </bk-table-column>
+        <bk-table-column prop="backup_time" label="备份时间"></bk-table-column>
+        <bk-table-column prop="backup_person" label="备份人"></bk-table-column>
+        <bk-table-column prop="job_link" label="JOB链接" width="400">
+            <template slot-scope="scope">
+                <a :href="scope.row.job_link" target="_blank">{{ scope.row.job_link }}</a>
+            </template>
+        </bk-table-column>
+    </bk-table>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% block script %}
+<script>
+
+    window.onload = function () {
+
+        document.getElementById('historyPage').setAttribute("class", "active");
+        document.getElementById('indexPage').setAttribute("class", "");
+
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    history_list:[],
+                }
+            },
+
+            mounted() {
+                this.historyList();
+            },
+            methods: {
+                historyList() {
+                    axios({
+                        url: site_url + "history_info",
+                        method: 'GET'
+                    }).then(res => {
+                        this.history_list = res.data['data']
+                    })
+                },
+            }
+        })
+    }
+</script>
+{% endblock %}
+
+

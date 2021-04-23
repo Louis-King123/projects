@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="13646a6a-802e-4010-a688-be15e6e647ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/check_saas_h5/ss、" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/she-exam-4/home_application/dd.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/she-exam-4/home_application/modify_time.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/she-exam-4/home_application/scp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sheTest/config/local_settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sheTest/pippackage/douban.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sheTest/pippackage/doubanpypi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songjiang/.idea/thriftCompiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songjiang/resource.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-opr-manage/app/jobs/report/alert.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai-opr-manage/app/jobs/report/alert.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-opr-manage/app/jobs/report/resource_set.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai-opr-manage/app/jobs/report/resource_set.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-opr-manage/app/jobs/report_job.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai-opr-manage/app/jobs/report_job.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-opr-manage/resource.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ai-opr-manage/resource.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-opr-manage/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ai-opr-manage/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/check_saas_h5/src/views/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/check_saas_h5/src/views/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/she-exam-4/config/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/she-exam-4/config/default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/she-exam-4/config/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/she-exam-4/config/dev.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/she-exam-4/home_application/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/she-exam-4/home_application/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/she-exam-4/home_application/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/she-exam-4/home_application/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sheTest/config/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/sheTest/config/dev.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/.idea/framework_py.iml" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/.idea/framework_py.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/config/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/config/dev.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/css/chunk-bk-magic-vue.1f791c2d033efef16fcd.css" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/css/chunk-bk-magic-vue.1f791c2d033efef16fcd.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/css/entry.700537e2525a55319e91.css" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/css/entry.700537e2525a55319e91.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/css/main.cefae2def61f8139fb58.css" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/css/main.cefae2def61f8139fb58.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/css/none.9b3ffe7db0ef4b5369e9.css" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/css/none.267a10520d55b2ac9662.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/css/vendors~main.3ada8c9915cd6e5ef5f9.css" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/css/vendors~main.3ada8c9915cd6e5ef5f9.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/fonts/element-icons.535877f.woff" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/fonts/element-icons.535877f.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/fonts/element-icons.732389d.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/fonts/element-icons.732389d.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/fonts/iconcool.73b7ae4.woff" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/fonts/iconcool.73b7ae4.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/fonts/iconcool.92e669c.eot" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/fonts/iconcool.92e669c.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/fonts/iconcool.99a84d9.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/fonts/iconcool.99a84d9.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/images/500.7eabdbb.png" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/images/500.7eabdbb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/images/bg.c64d825.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/images/bg.c64d825.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/images/iconcool.3a0bc10.svg" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/images/iconcool.3a0bc10.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/images/test.0f06836.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/images/test.0f06836.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/js/chunk-bk-magic-vue.7c0696ed32615a3e8f92.js" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/js/chunk-bk-magic-vue.7c0696ed32615a3e8f92.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/js/entry.77ecd43692a1759e365d.js" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/js/entry.4902d028dead11d52847.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/js/main.bdb005e7df3369d62f09.js" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/js/main.530d01f2615c58d4ea61.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/js/none.656baad4591ad1afb735.js" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/js/none.d7965060cfaab62191f9.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/js/vendors~main.6ba637d74745db303208.js" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/js/vendors~main.34008584741f6df7c401.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/js/vendors~none.4bcb9c99657184b4b496.js" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/js/vendors~none.4bcb9c99657184b4b496.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/lib-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/lib-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songjiang/static/dist/static/lib.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/songjiang/static/dist/static/lib.bundle.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="she-test: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/saas-checksystem" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/check_saas_h5/package.json" />
+  </component>
+  <component name="ProjectId" id="1mMEeTUHRw4s54MVhLQjqCsC8ep" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/exam_api_test" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/sheTest/blueking/component/apis" />
+      <recent name="$PROJECT_DIR$/firstvue/ds" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/exam_api_test" />
+      <recent name="$PROJECT_DIR$/exam_api_test/home_application" />
+      <recent name="$PROJECT_DIR$/exam_api_test/config" />
+      <recent name="$PROJECT_DIR$/test_uwsgi/utils" />
+      <recent name="$PROJECT_DIR$/ai-opr-manage/operate_manage_platform" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.exam_api_test">
+    <configuration name="asp-test" type="PythonConfigurationType" factoryName="Python">
+      <module name="BK" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/asp_test" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/asp_test/manage.py" />
+      <option name="PARAMETERS" value="runserver 127.0.0.1:8899" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="celery_one" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BK" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/exam_api_test/celery_task" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exam_api_test/celery_task/celery_one.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="doubanpypi (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BK" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_uwsgi" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_uwsgi/doubanpypi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="exam_api_test" type="PythonConfigurationType" factoryName="Python">
+      <module name="BK" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/exam_api_test" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exam_api_test/manage.py" />
+      <option name="PARAMETERS" value="runserver appdev.paas.bktencent.com:8000" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="redis_test_fuc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BK" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_uwsgi/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_uwsgi/utils/redis_test_fuc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="redis_test_lpush" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BK" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_uwsgi/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_uwsgi/utils/redis_test_lpush.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="redis_test_obj" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BK" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_uwsgi/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_uwsgi/utils/redis_test_obj.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="saas-checksystem" type="PythonConfigurationType" factoryName="Python">
+      <module name="BK" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/saas-checksystem" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/saas-checksystem/manage.py" />
+      <option name="PARAMETERS" value="runserver appdev.paas.bkce.com:8000" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="BK" type="Python.DjangoServer" factoryName="Django server">
+      <module name="BK" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.BK" />
+      <item itemvalue="Python.exam_api_test" />
+      <item itemvalue="Python.asp-test" />
+      <item itemvalue="Python.saas-checksystem" />
+      <item itemvalue="Python.doubanpypi (1)" />
+      <item itemvalue="Python.redis_test_obj" />
+      <item itemvalue="Python.redis_test_fuc" />
+      <item itemvalue="Python.redis_test_lpush" />
+      <item itemvalue="Python.celery_one" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.celery_one" />
+        <item itemvalue="Python.doubanpypi (1)" />
+        <item itemvalue="Python.redis_test_lpush" />
+        <item itemvalue="Python.redis_test_fuc" />
+        <item itemvalue="Python.redis_test_obj" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.1909989" />
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13646a6a-802e-4010-a688-be15e6e647ba" name="Default Changelist" comment="" />
+      <created>1609295154335</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609295154335</updated>
+      <workItem from="1609295155997" duration="1061000" />
+      <workItem from="1609298410126" duration="235000" />
+      <workItem from="1609298659068" duration="13738000" />
+      <workItem from="1609319346219" duration="7388000" />
+      <workItem from="1609379008811" duration="23493000" />
+      <workItem from="1609724713895" duration="4337000" />
+      <workItem from="1609730516507" duration="23026000" />
+      <workItem from="1609811002319" duration="25274000" />
+      <workItem from="1609897772402" duration="20769000" />
+      <workItem from="1609984043789" duration="25081000" />
+      <workItem from="1610071636521" duration="19593000" />
+      <workItem from="1610103916732" duration="68000" />
+      <workItem from="1610104000182" duration="91000" />
+      <workItem from="1610104107327" duration="203000" />
+      <workItem from="1610330380708" duration="20151000" />
+      <workItem from="1610502523850" duration="19892000" />
+      <workItem from="1610589227598" duration="20263000" />
+      <workItem from="1610676781016" duration="21468000" />
+      <workItem from="1610934967531" duration="19527000" />
+      <workItem from="1611021652875" duration="11312000" />
+      <workItem from="1611108493902" duration="18686000" />
+      <workItem from="1611194664918" duration="21992000" />
+      <workItem from="1611539469874" duration="19387000" />
+      <workItem from="1611626549202" duration="23679000" />
+      <workItem from="1611713373266" duration="19820000" />
+      <workItem from="1611799879212" duration="16788000" />
+      <workItem from="1611885749301" duration="19492000" />
+      <workItem from="1612144957960" duration="22811000" />
+      <workItem from="1612230966172" duration="22548000" />
+      <workItem from="1612317170669" duration="16755000" />
+      <workItem from="1612403459517" duration="25664000" />
+      <workItem from="1612491542745" duration="13610000" />
+      <workItem from="1613698543528" duration="15403000" />
+      <workItem from="1613786363640" duration="18668000" />
+      <workItem from="1613958128476" duration="9620000" />
+      <workItem from="1614045694496" duration="14234000" />
+      <workItem from="1614132547416" duration="1421000" />
+      <workItem from="1614218813291" duration="682000" />
+      <workItem from="1614305519562" duration="310000" />
+      <workItem from="1614564313164" duration="6688000" />
+      <workItem from="1614651764163" duration="5978000" />
+      <workItem from="1614823350271" duration="8657000" />
+      <workItem from="1614910001946" duration="1484000" />
+      <workItem from="1615170707506" duration="22631000" />
+      <workItem from="1615256225099" duration="22208000" />
+      <workItem from="1615340833343" duration="13019000" />
+      <workItem from="1615773383737" duration="3544000" />
+      <workItem from="1615860116332" duration="22516000" />
+      <workItem from="1615946469324" duration="17668000" />
+      <workItem from="1616032697004" duration="9282000" />
+      <workItem from="1616119459007" duration="2927000" />
+      <workItem from="1616379713758" duration="3935000" />
+      <workItem from="1616397639194" duration="8641000" />
+      <workItem from="1616464385191" duration="13460000" />
+      <workItem from="1616551448201" duration="1200000" />
+      <workItem from="1616556530833" duration="404000" />
+      <workItem from="1616560660729" duration="3325000" />
+      <workItem from="1616642898738" duration="2751000" />
+      <workItem from="1616666450334" duration="2108000" />
+      <workItem from="1616738671120" duration="1525000" />
+      <workItem from="1616811398148" duration="4764000" />
+      <workItem from="1616915525547" duration="5662000" />
+      <workItem from="1616998090071" duration="242000" />
+      <workItem from="1617003555011" duration="2161000" />
+      <workItem from="1617106893273" duration="392000" />
+      <workItem from="1617242002737" duration="11391000" />
+      <workItem from="1617784549922" duration="4724000" />
+      <workItem from="1617847005479" duration="5815000" />
+      <workItem from="1617951491154" duration="4890000" />
+      <workItem from="1618196779332" duration="1490000" />
+      <workItem from="1618365326368" duration="5424000" />
+      <workItem from="1618452185880" duration="13286000" />
+      <workItem from="1618538686336" duration="12953000" />
+      <workItem from="1618797335006" duration="5316000" />
+      <workItem from="1618884774415" duration="20555000" />
+      <workItem from="1618970854337" duration="15911000" />
+      <workItem from="1619056220281" duration="16628000" />
+      <workItem from="1619142395354" duration="912000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="122" key="#ESLint" timestamp="1616924713451">
+      <screen x="0" y="23" width="1440" height="832" />
+    </state>
+    <state x="320" y="122" key="#ESLint/0.23.1440.832@0.23.1440.832" timestamp="1616924713451" />
+    <state x="320" y="104" key="#Log_Highlighting_(ideolog)" timestamp="1617284072027">
+      <screen x="0" y="23" width="1440" height="832" />
+    </state>
+    <state x="320" y="104" key="#Log_Highlighting_(ideolog)/0.23.1440.832@0.23.1440.832" timestamp="1617284072027" />
+    <state x="-1071" y="212" width="1097" height="623" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619084885235">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state x="231" y="48" width="1097" height="623" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.832@0.23.1440.832" timestamp="1617264367116" />
+    <state x="-1071" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1619084885235" />
+    <state x="480" y="307" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617242032762">
+      <screen x="0" y="23" width="1440" height="832" />
+    </state>
+    <state x="480" y="307" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.832@0.23.1440.832" timestamp="1617242032762" />
+    <state x="-1280" y="368" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1611659624093" />
+    <state x="-1158" y="292" key="FileChooserDialogImpl" timestamp="1613812718202">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state x="-1158" y="292" key="FileChooserDialogImpl/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1613812718202" />
+    <state width="1790" height="206" key="GridCell.Tab.0.bottom" timestamp="1619090218340">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state width="1790" height="305" key="GridCell.Tab.0.bottom/0.23.1440.832/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1618538965994" />
+    <state width="1398" height="249" key="GridCell.Tab.0.bottom/0.23.1440.832/-1920.23.1920.1057@0.23.1440.832" timestamp="1616678955680" />
+    <state width="1398" height="405" key="GridCell.Tab.0.bottom/0.23.1440.832@0.23.1440.832" timestamp="1617887716493" />
+    <state width="1790" height="206" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1619090218340" />
+    <state width="1107" height="229" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.23.1920.1012@0.23.1440.877" timestamp="1615172970658" />
+    <state width="1790" height="206" key="GridCell.Tab.0.center" timestamp="1619090218339">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state width="1790" height="305" key="GridCell.Tab.0.center/0.23.1440.832/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1618538965993" />
+    <state width="1398" height="249" key="GridCell.Tab.0.center/0.23.1440.832/-1920.23.1920.1057@0.23.1440.832" timestamp="1616678955679" />
+    <state width="1398" height="405" key="GridCell.Tab.0.center/0.23.1440.832@0.23.1440.832" timestamp="1617887716492" />
+    <state width="1790" height="206" key="GridCell.Tab.0.center/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1619090218339" />
+    <state width="1107" height="229" key="GridCell.Tab.0.center/0.23.1440.877/-1920.23.1920.1012@0.23.1440.877" timestamp="1615172970657" />
+    <state width="1790" height="206" key="GridCell.Tab.0.left" timestamp="1619090218339">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state width="1790" height="305" key="GridCell.Tab.0.left/0.23.1440.832/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1618538965992" />
+    <state width="1398" height="249" key="GridCell.Tab.0.left/0.23.1440.832/-1920.23.1920.1057@0.23.1440.832" timestamp="1616678955679" />
+    <state width="1398" height="405" key="GridCell.Tab.0.left/0.23.1440.832@0.23.1440.832" timestamp="1617887716491" />
+    <state width="1790" height="206" key="GridCell.Tab.0.left/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1619090218339" />
+    <state width="1107" height="229" key="GridCell.Tab.0.left/0.23.1440.877/-1920.23.1920.1012@0.23.1440.877" timestamp="1615172970656" />
+    <state width="1790" height="206" key="GridCell.Tab.0.right" timestamp="1619090218340">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state width="1790" height="305" key="GridCell.Tab.0.right/0.23.1440.832/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1618538965994" />
+    <state width="1398" height="249" key="GridCell.Tab.0.right/0.23.1440.832/-1920.23.1920.1057@0.23.1440.832" timestamp="1616678955680" />
+    <state width="1398" height="405" key="GridCell.Tab.0.right/0.23.1440.832@0.23.1440.832" timestamp="1617887716492" />
+    <state width="1790" height="206" key="GridCell.Tab.0.right/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1619090218340" />
+    <state width="1107" height="229" key="GridCell.Tab.0.right/0.23.1440.877/-1920.23.1920.1012@0.23.1440.877" timestamp="1615172970657" />
+    <state width="1790" height="283" key="GridCell.Tab.1.bottom" timestamp="1619002892407">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state width="1851" height="391" key="GridCell.Tab.1.bottom/0.23.1440.832/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1612441223733" />
+    <state width="1398" height="151" key="GridCell.Tab.1.bottom/0.23.1440.832@0.23.1440.832" timestamp="1616419643125" />
+    <state width="1790" height="283" key="GridCell.Tab.1.bottom/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1619002892407" />
+    <state width="1790" height="283" key="GridCell.Tab.1.center" timestamp="1619002892407">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state width="1851" height="391" key="GridCell.Tab.1.center/0.23.1440.832/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1612441223733" />
+    <state width="1398" height="151" key="GridCell.Tab.1.center/0.23.1440.832@0.23.1440.832" timestamp="1616419643124" />
+    <state width="1790" height="283" key="GridCell.Tab.1.center/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1619002892407" />
+    <state width="1790" height="283" key="GridCell.Tab.1.left" timestamp="1619002892407">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state width="1851" height="391" key="GridCell.Tab.1.left/0.23.1440.832/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1612441223732" />
+    <state width="1398" height="151" key="GridCell.Tab.1.left/0.23.1440.832@0.23.1440.832" timestamp="1616419643124" />
+    <state width="1790" height="283" key="GridCell.Tab.1.left/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1619002892407" />
+    <state width="1790" height="283" key="GridCell.Tab.1.right" timestamp="1619002892407">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state width="1851" height="391" key="GridCell.Tab.1.right/0.23.1440.832/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1612441223733" />
+    <state width="1398" height="151" key="GridCell.Tab.1.right/0.23.1440.832@0.23.1440.832" timestamp="1616419643124" />
+    <state width="1790" height="283" key="GridCell.Tab.1.right/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1619002892407" />
+    <state width="240" height="435" key="HiddenNamespacesPopup" timestamp="1617006484818">
+      <screen x="0" y="23" width="1440" height="832" />
+    </state>
+    <state width="240" height="435" key="HiddenNamespacesPopup/0.23.1440.832@0.23.1440.832" timestamp="1617006484818" />
+    <state width="319" height="528" key="HiddenNamespacesPopup/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1615259118997" />
+    <state width="239" height="457" key="HiddenNamespacesPopup/0.23.1440.877/-1920.23.1920.1012@0.23.1440.877" timestamp="1615172842112" />
+    <state x="-1625" y="112" key="SettingsEditor" timestamp="1618477384685">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state x="-1625" y="112" key="SettingsEditor/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1618477384685" />
+    <state x="-1287" y="241" key="VCS.ChangeListViewerDialog" timestamp="1611036586119">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state x="-1287" y="241" key="VCS.ChangeListViewerDialog/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1611036586119" />
+    <state width="946" height="504" key="XDebugger.FullValuePopup" timestamp="1613802934563">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state width="946" height="504" key="XDebugger.FullValuePopup/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1613802934563" />
+    <state x="632" y="359" width="350" height="220" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1617793456908">
+      <screen x="0" y="23" width="1440" height="832" />
+    </state>
+    <state x="632" y="359" width="350" height="220" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.23.1440.832@0.23.1440.832" timestamp="1617793456908" />
+    <state x="-1078" y="432" width="326" height="220" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1611130227400" />
+    <state x="-1377" y="203" key="com.intellij.database.dbimport.ImportDialog" timestamp="1610955812219">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state x="-1377" y="203" key="com.intellij.database.dbimport.ImportDialog/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1610955812219" />
+    <state x="-1177" y="365" width="423" height="322" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1611214966224">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state x="-1177" y="365" width="423" height="322" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1611214966224" />
+    <state x="515" y="185" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1616811832266">
+      <screen x="0" y="23" width="1440" height="832" />
+    </state>
+    <state x="515" y="185" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.23.1440.832@0.23.1440.832" timestamp="1616811832266" />
+    <state x="-1233" y="220" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1611731913242" />
+    <state x="-1095" y="300" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1611126978480">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state x="-1095" y="300" key="com.intellij.database.view.ui.DbObjectDialog/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1611126978480" />
+    <state x="-1302" y="194" width="1082" height="668" key="find.popup" timestamp="1619085176743">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state x="464" y="164" width="812" height="550" key="find.popup/0.23.1440.832@0.23.1440.832" timestamp="1617847139632" />
+    <state x="-1302" y="194" width="1082" height="668" key="find.popup/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1619085176743" />
+    <state x="378" y="218" width="683" height="486" key="find.popup/0.23.1440.877/-1920.23.1920.1012@0.23.1440.877" timestamp="1615172176261" />
+    <state x="-1282" y="249" width="670" height="676" key="search.everywhere.popup" timestamp="1613813471577">
+      <screen x="-1920" y="23" width="1920" height="1012" />
+    </state>
+    <state x="-1282" y="249" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/-1920.23.1920.1012@-1920.23.1920.1012" timestamp="1613813471577" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BK$redis_test.coverage" NAME="redis_test_obj Coverage Results" MODIFIED="1617861534744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_uwsgi/utils" />
+    <SUITE FILE_PATH="coverage/BK$ss.coverage" NAME="ss Coverage Results" MODIFIED="1614050544306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/firstvue" />
+    <SUITE FILE_PATH="coverage/BK$click_test.coverage" NAME="click_test Coverage Results" MODIFIED="1614582516985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/firstvue" />
+    <SUITE FILE_PATH="coverage/BK$itemtest.coverage" NAME="itemtest Coverage Results" MODIFIED="1613803345914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/firstvue" />
+    <SUITE FILE_PATH="coverage/BK$xiecheng.coverage" NAME="xiecheng Coverage Results" MODIFIED="1613978408776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/firstvue" />
+    <SUITE FILE_PATH="coverage/BK$numpy_example.coverage" NAME="numpy_example Coverage Results" MODIFIED="1615274710904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/firstvue" />
+    <SUITE FILE_PATH="coverage/BK$redis_test_fuc.coverage" NAME="redis_test_fuc Coverage Results" MODIFIED="1617861698809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_uwsgi/utils" />
+    <SUITE FILE_PATH="coverage/BK$flaskTest.coverage" NAME="flaskTest Coverage Results" MODIFIED="1613809080692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/firstvue" />
+    <SUITE FILE_PATH="coverage/BK$exam_api_test.coverage" NAME="exam_api_test Coverage Results" MODIFIED="1619085520017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/exam_api_test" />
+    <SUITE FILE_PATH="coverage/BK$doubanpypi__1_.coverage" NAME="doubanpypi (1) Coverage Results" MODIFIED="1617864244803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_uwsgi" />
+    <SUITE FILE_PATH="coverage/BK$itertools_example.coverage" NAME="itertools_example Coverage Results" MODIFIED="1614844475611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/firstvue" />
+    <SUITE FILE_PATH="coverage/BK$scp.coverage" NAME="scp Coverage Results" MODIFIED="1616148166602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/she-exam-4/home_application" />
+    <SUITE FILE_PATH="coverage/BK$asp_test.coverage" NAME="asp-test Coverage Results" MODIFIED="1616552721965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/asp_test" />
+    <SUITE FILE_PATH="coverage/BK$redis_test_lpush.coverage" NAME="redis_test_lpush Coverage Results" MODIFIED="1617862404589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_uwsgi/utils" />
+    <SUITE FILE_PATH="coverage/BK$doubanpypi.coverage" NAME="doubanpypi Coverage Results" MODIFIED="1616921038275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sheTest/pippackage" />
+    <SUITE FILE_PATH="coverage/BK$delay_test.coverage" NAME="delay_test Coverage Results" MODIFIED="1616653728529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/asp_test/asp_test" />
+    <SUITE FILE_PATH="coverage/BK$oracle_test.coverage" NAME="oracle_test Coverage Results" MODIFIED="1616672127881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/asp_test/asp_test" />
+    <SUITE FILE_PATH="coverage/BK$yeildForm.coverage" NAME="yeildForm Coverage Results" MODIFIED="1613979448880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/firstvue" />
+    <SUITE FILE_PATH="coverage/BK$saas_checksystem.coverage" NAME="saas-checksystem Coverage Results" MODIFIED="1618471447260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/saas-checksystem" />
+    <SUITE FILE_PATH="coverage/BK$celery_one.coverage" NAME="celery_one Coverage Results" MODIFIED="1619085085063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/exam_api_test/celery_task" />
+    <SUITE FILE_PATH="coverage/BK$JSON.coverage" NAME="解析JSON Coverage Results" MODIFIED="1612493019126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/firstvue" />
+  </component>
+</project>

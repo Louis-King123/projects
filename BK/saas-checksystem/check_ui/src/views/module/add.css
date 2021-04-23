@@ -1,0 +1,62 @@
+.flexBox-row-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.addModuleContainer {
+  width: 100%;
+  height: 100%;
+}
+.comStepContainer {
+  padding: 20px;
+  background: #F5F5F5;
+}
+.comStepContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+.comBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.firstStepContainer {
+  background: #ffffff;
+  margin: 0 20px;
+}
+.firstStepItem {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  width: 280px;
+  height: 100px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin: 0 auto 20px auto;
+  font-weight: 600;
+}
+.secondStepContainer {
+  margin: 0 20px;
+}
+.secondStepContent {
+  width: 100%;
+  height: 100%;
+}
+.secondStepItem {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 6px;
+}
+.lastStepContainer {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+}
+.lastStepTitle {
+  width: 100px;
+  text-align: right;
+  padding-right: 24px;
+}
+.active {
+  background: #1d91ec;
+}

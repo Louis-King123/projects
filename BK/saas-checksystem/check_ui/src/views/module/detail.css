@@ -1,0 +1,14 @@
+.moduleDetailContainer {
+  padding: 20px;
+}
+.moduleDetailItem {
+  background: #ffffff;
+  border-radius: 6px;
+}
+.btnContainer {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}

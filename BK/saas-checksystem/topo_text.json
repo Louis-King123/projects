@@ -1,0 +1,592 @@
+{
+    "id": 2,
+    "name": "蓝鲸",
+    "bk_inst_id": 2,
+    "bk_obj_id": "biz",
+    "children": [
+        {
+            "id": 4,
+            "name": "PaaS平台",
+            "bk_inst_id": 4,
+            "bk_obj_id": "set",
+            "children": [
+                {
+                    "id": 12,
+                    "name": "apigw",
+                    "bk_inst_id": 12,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 8,
+                    "name": "appengine",
+                    "bk_inst_id": 8,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 13,
+                    "name": "appo",
+                    "bk_inst_id": 13,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 14,
+                    "name": "appt",
+                    "bk_inst_id": 14,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 10,
+                    "name": "esb",
+                    "bk_inst_id": 10,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 11,
+                    "name": "login",
+                    "bk_inst_id": 11,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 9,
+                    "name": "paas",
+                    "bk_inst_id": 9,
+                    "bk_obj_id": "module"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "公共组件",
+            "bk_inst_id": 10,
+            "bk_obj_id": "set",
+            "children": [
+                {
+                    "id": 51,
+                    "name": "beanstalk",
+                    "bk_inst_id": 51,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 52,
+                    "name": "consul",
+                    "bk_inst_id": 52,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 62,
+                    "name": "consul-template",
+                    "bk_inst_id": 62,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 53,
+                    "name": "elasticsearch",
+                    "bk_inst_id": 53,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 54,
+                    "name": "influxdb",
+                    "bk_inst_id": 54,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 55,
+                    "name": "kafka",
+                    "bk_inst_id": 55,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 56,
+                    "name": "mongodb",
+                    "bk_inst_id": 56,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 57,
+                    "name": "mysql",
+                    "bk_inst_id": 57,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 58,
+                    "name": "nginx",
+                    "bk_inst_id": 58,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 59,
+                    "name": "rabbitmq",
+                    "bk_inst_id": 59,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 60,
+                    "name": "redis",
+                    "bk_inst_id": 60,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 61,
+                    "name": "zookeeper",
+                    "bk_inst_id": 61,
+                    "bk_obj_id": "module"
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "name": "故障自愈",
+            "bk_inst_id": 13,
+            "bk_obj_id": "set",
+            "children": [
+                {
+                    "id": 65,
+                    "name": "fta-api",
+                    "bk_inst_id": 65,
+                    "bk_obj_id": "module"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "管控平台",
+            "bk_inst_id": 8,
+            "bk_obj_id": "set",
+            "children": [
+                {
+                    "id": 30,
+                    "name": "gse_alarm",
+                    "bk_inst_id": 30,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 29,
+                    "name": "gse_api",
+                    "bk_inst_id": 29,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 31,
+                    "name": "gse_btsvr",
+                    "bk_inst_id": 31,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 32,
+                    "name": "gse_data",
+                    "bk_inst_id": 32,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 33,
+                    "name": "gse_dba",
+                    "bk_inst_id": 33,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 34,
+                    "name": "gse_proc",
+                    "bk_inst_id": 34,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 36,
+                    "name": "gse_syncdata",
+                    "bk_inst_id": 36,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 35,
+                    "name": "gse_task",
+                    "bk_inst_id": 35,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 37,
+                    "name": "license",
+                    "bk_inst_id": 37,
+                    "bk_obj_id": "module"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "监控平台v3",
+            "bk_inst_id": 7,
+            "bk_obj_id": "set",
+            "children": [
+                {
+                    "id": 28,
+                    "name": "grafana",
+                    "bk_inst_id": 28,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 27,
+                    "name": "influxdb-proxy",
+                    "bk_inst_id": 27,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 25,
+                    "name": "monitor",
+                    "bk_inst_id": 25,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 26,
+                    "name": "transfer",
+                    "bk_inst_id": 26,
+                    "bk_obj_id": "module"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "name": "节点管理",
+            "bk_inst_id": 11,
+            "bk_obj_id": "set",
+            "children": [
+                {
+                    "id": 63,
+                    "name": "nodeman-api",
+                    "bk_inst_id": 63,
+                    "bk_obj_id": "module"
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "name": "蓝盾",
+            "bk_inst_id": 16,
+            "bk_obj_id": "set",
+            "children": [
+                {
+                    "id": 72,
+                    "name": "ci-agentless",
+                    "bk_inst_id": 72,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 73,
+                    "name": "ci-artifactory",
+                    "bk_inst_id": 73,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 74,
+                    "name": "ci-auth",
+                    "bk_inst_id": 74,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 75,
+                    "name": "ci-dispatch",
+                    "bk_inst_id": 75,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 71,
+                    "name": "ci-dockerhost",
+                    "bk_inst_id": 71,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 76,
+                    "name": "ci-environment",
+                    "bk_inst_id": 76,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 70,
+                    "name": "ci-gateway",
+                    "bk_inst_id": 70,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 77,
+                    "name": "ci-image",
+                    "bk_inst_id": 77,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 78,
+                    "name": "ci-log",
+                    "bk_inst_id": 78,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 79,
+                    "name": "ci-misc",
+                    "bk_inst_id": 79,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 80,
+                    "name": "ci-notify",
+                    "bk_inst_id": 80,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 81,
+                    "name": "ci-openapi",
+                    "bk_inst_id": 81,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 82,
+                    "name": "ci-plugin",
+                    "bk_inst_id": 82,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 83,
+                    "name": "ci-process",
+                    "bk_inst_id": 83,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 84,
+                    "name": "ci-project",
+                    "bk_inst_id": 84,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 85,
+                    "name": "ci-quality",
+                    "bk_inst_id": 85,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 86,
+                    "name": "ci-repository",
+                    "bk_inst_id": 86,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 87,
+                    "name": "ci-store",
+                    "bk_inst_id": 87,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 88,
+                    "name": "ci-ticket",
+                    "bk_inst_id": 88,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 89,
+                    "name": "ci-websocket",
+                    "bk_inst_id": 89,
+                    "bk_obj_id": "module"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "配置平台",
+            "bk_inst_id": 9,
+            "bk_obj_id": "set",
+            "children": [
+                {
+                    "id": 38,
+                    "name": "cmdb-admin",
+                    "bk_inst_id": 38,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 39,
+                    "name": "cmdb-api",
+                    "bk_inst_id": 39,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 40,
+                    "name": "cmdb-auth",
+                    "bk_inst_id": 40,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 41,
+                    "name": "cmdb-cloud",
+                    "bk_inst_id": 41,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 42,
+                    "name": "cmdb-core",
+                    "bk_inst_id": 42,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 43,
+                    "name": "cmdb-datacollection",
+                    "bk_inst_id": 43,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 44,
+                    "name": "cmdb-event",
+                    "bk_inst_id": 44,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 45,
+                    "name": "cmdb-host",
+                    "bk_inst_id": 45,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 46,
+                    "name": "cmdb-op",
+                    "bk_inst_id": 46,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 47,
+                    "name": "cmdb-proc",
+                    "bk_inst_id": 47,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 48,
+                    "name": "cmdb-task",
+                    "bk_inst_id": 48,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 49,
+                    "name": "cmdb-topo",
+                    "bk_inst_id": 49,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 50,
+                    "name": "cmdb-web",
+                    "bk_inst_id": 50,
+                    "bk_obj_id": "module"
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "name": "日志平台",
+            "bk_inst_id": 12,
+            "bk_obj_id": "set",
+            "children": [
+                {
+                    "id": 64,
+                    "name": "bklog-api",
+                    "bk_inst_id": 64,
+                    "bk_obj_id": "module"
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "name": "容器管理平台",
+            "bk_inst_id": 14,
+            "bk_obj_id": "set",
+            "children": [
+                {
+                    "id": 66,
+                    "name": "bcs",
+                    "bk_inst_id": 66,
+                    "bk_obj_id": "module"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "用户认证平台",
+            "bk_inst_id": 5,
+            "bk_obj_id": "set",
+            "children": [
+                {
+                    "id": 15,
+                    "name": "bk-iam",
+                    "bk_inst_id": 15,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 16,
+                    "name": "bk-ssm",
+                    "bk_inst_id": 16,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 17,
+                    "name": "usermgr",
+                    "bk_inst_id": 17,
+                    "bk_obj_id": "module"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "中控机",
+            "bk_inst_id": 3,
+            "bk_obj_id": "set",
+            "children": [
+                {
+                    "id": 7,
+                    "name": "controller_ip",
+                    "bk_inst_id": 7,
+                    "bk_obj_id": "module"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "作业平台v3",
+            "bk_inst_id": 6,
+            "bk_obj_id": "set",
+            "children": [
+                {
+                    "id": 24,
+                    "name": "job-backup",
+                    "bk_inst_id": 24,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 18,
+                    "name": "job-config",
+                    "bk_inst_id": 18,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 19,
+                    "name": "job-crontab",
+                    "bk_inst_id": 19,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 20,
+                    "name": "job-execute",
+                    "bk_inst_id": 20,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 21,
+                    "name": "job-gateway",
+                    "bk_inst_id": 21,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 22,
+                    "name": "job-logsvr",
+                    "bk_inst_id": 22,
+                    "bk_obj_id": "module"
+                },
+                {
+                    "id": 23,
+                    "name": "job-manage",
+                    "bk_inst_id": 23,
+                    "bk_obj_id": "module"
+                }
+            ]
+        }
+    ]
+}

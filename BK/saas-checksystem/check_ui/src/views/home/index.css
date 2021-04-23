@@ -1,0 +1,49 @@
+.row-home {
+    margin-top: 20px;
+}
+
+.col-md {
+    height: 150px;
+    color: white;
+    line-height: 130px;
+    text-align: center;
+    box-shadow: 10px 10px 6px #c3cdd7;
+}
+
+.col-md-left {
+    width: 30%;
+    height: 150px;
+    font-size: 30px;
+    float: left;
+}
+
+.col-md-right {
+    width: 70%;
+    height: 150px;
+    float: right;
+}
+
+.status-text {
+    display: block;
+    width: 20%;
+    height: 30px;
+    background: #699df4;
+    color: white;
+    line-height: 30px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.status-time {
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.status-text-a {
+    display: block;
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}

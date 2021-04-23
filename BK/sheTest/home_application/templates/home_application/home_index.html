@@ -1,0 +1,192 @@
+{% include 'index.html' %}
+{% block content %}
+{% verbatim %}
+<div id="app" style="width:1366px; margin: 20px auto 0 auto;">
+    <bk-form form-type="inline">
+        <bk-form-item label="选择业务">
+            <bk-select :disabled="false" v-model="bus_value" style="width: 250px;"
+                       ext-cls="select-custom"
+                       ext-popover-cls="select-popover-custom"
+                       @change="search_job"
+                       searchable>
+                <bk-option v-for="option in bus_list"
+                           :key="option.bk_biz_id"
+                           :id="option.bk_biz_id"
+                           :name="option.bk_biz_name">
+                </bk-option>
+            </bk-select>
+        </bk-form-item>
+        <bk-form-item label="选择作业模版">
+            <bk-select :disabled="false" v-model="job_value" style="width: 250px;"
+                       ext-cls="select-custom"
+                       ext-popover-cls="select-popover-custom"
+                       searchable>
+                <bk-option v-for="option in job_list"
+                           :key="option.id"
+                           :id="option.id"
+                           :name="option.name">
+                </bk-option>
+            </bk-select>
+        </bk-form-item>
+        <bk-form-item>
+            <bk-button theme="primary" @click="execute_script">执行</bk-button>
+        </bk-form-item>
+    </bk-form>
+
+    <bk-table style="margin-top:15px;" :data="hosts_list" @select="Check_box">
+        <bk-table-column type="selection" width="60"></bk-table-column>
+        <bk-table-column prop="bk_host_id" label="id"></bk-table-column>
+        <bk-table-column prop="bk_host_name" label="主机名"></bk-table-column>
+        <bk-table-column prop="bk_host_innerip" label="内网IP"></bk-table-column>
+        <bk-table-column label="配置">
+            <template slot-scope="scope" v-if="scope.row.bk_cpu">
+                <span>{{ scope.row.bk_cpu }}核</span>
+                <span>{{ (scope.row.bk_mem/1024).toFixed(2) }}G,</span>
+                <span>{{ (scope.row.bk_disk/1024).toFixed(2) }}G</span>
+            </template>
+        </bk-table-column>
+        <bk-table-column prop="bk_os_type" label="系统">
+            <template slot-scope="scope">
+                <span>{{ scope.row.bk_os_type }} {{ scope.row.bk_os_version }}</span>
+            </template>
+        </bk-table-column>
+    </bk-table>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% block script %}
+<script>
+    window.onload = function () {
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    // 业务
+                    bus_value:"",
+                    job_value:"",
+                    bus_list: [],
+                    job_list: [],
+                    // 主机列表
+                    hosts_list:[],
+                    // 选中主机
+                    host:[]
+                }
+            },
+            mounted() {
+                this.Business();
+            },
+            methods: {
+                // 获取业务
+                Business() {
+                    axios({
+                        url: site_url + "business",
+                        method: 'GET'
+                    }).then(res => {
+                        {#console.log(res.data);#}
+                        this.bus_list = res.data['data']
+                    })
+                },
+                // 查询
+                search_host() {
+                    axios({
+                        url: site_url + "search_host",
+                        method: 'GET',
+                        params:{'biz_id': this.bus_value}
+                    }).then(res => {
+                        {#console.log(res.data);#}
+                        this.hosts_list = res.data.data
+
+                    })
+                },
+
+                search_job() {
+                    this.job_value = ""
+                    this.search_host()
+                    axios({
+                        url: site_url + "job_list",
+                        method: 'GET',
+                        params:{'biz_id': this.bus_value}
+                    }).then(res => {
+                        {#console.log(res.data.data)#}
+                        this.job_list = res.data.data
+                    })
+                },
+
+                // table选择框
+                Check_box(selection, row) {
+
+                    let neW_list = [];
+                    for(let i=0; selection.length>i; i++){
+
+                        neW_list.push(selection[i]['bk_host_innerip'])
+                    }
+                    this.host = neW_list
+                },
+                // 执行运维模板
+                execute_script() {
+                    if(this.bus_value && this.job_value && this.host.length > 0){
+                            this.$bkInfo({
+                            title: '确认执行所选机器吗？',
+                            confirmLoading: true,
+                            confirmFn: async () => {
+                                axios({
+                                    url: site_url + "execute_job/",
+                                    method: "GET",
+                                    params: {'biz_id':this.bus_value, 'hosts': JSON.stringify(this.host), 'job_id': this.job_value}
+                                }).then(res => {
+                                    {#console.log(res.data.data)#}
+                                    if(res.data.code > 0){
+                                        this.errorInfoBox()
+                                    }else{
+                                        this.successInfoBox()
+                                    }
+                                })
+                            }
+                        })
+                    }else{
+                        alert("业务、模版、主机均为必选项！")
+                    }
+                },
+
+                successInfoBox () {
+                const a = this.$bkInfo({
+                    type: 'success',
+                    title: '任务执行中',
+                    subTitle: '此窗口3秒后关闭',
+                    showFooter: false
+                })
+
+                let num = 3
+                let t = setInterval(() => {
+                    a.subTitle = `此窗口${--num}秒后关闭`
+                    if (num === 0) {
+                        clearInterval(t)
+                        a.close()
+                    }
+                }, 1000)
+            },
+                errorInfoBox () {
+                const a = this.$bkInfo({
+                    type: 'error',
+                    title: '任务执行失败',
+                    subTitle: '此窗口3秒后关闭',
+                    showFooter: false
+                })
+
+                let num = 3
+                let t = setInterval(() => {
+                    a.subTitle = `此窗口${--num}秒后关闭`
+                    if (num === 0) {
+                        clearInterval(t)
+                        a.close()
+                    }
+                }, 1000)
+            }
+            }
+        })
+    }
+</script>
+{% endblock %}
+
+

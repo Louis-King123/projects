@@ -1,0 +1,111 @@
+.flexBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.moduleListContainer {
+  padding: 20px;
+}
+.moduleListNav {
+  background: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+.moduleListTitle {
+  min-width: 90px;
+  height: 36px;
+  line-height: 36px;
+}
+.allTag {
+  min-width: 60px;
+  text-align: center;
+}
+.navItem {
+  cursor: pointer;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 8px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+.active {
+  background: #1d91ec;
+}
+.moduleListNavCollapse {
+  height: 36px;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  color: #1d91ec;
+
+}
+.collapsed {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.listContainer {
+  margin: 20px 0;
+  background: #ffffff;
+  padding: 20px;
+}
+.addModuleBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #ccc;
+  font-size: 70px;
+}
+.listItem {
+  width: 250px;
+  height: 260px;
+  border: 1px solid #ccc;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 6px #ccc;
+  cursor: pointer;
+  margin: 0 auto 20px auto;
+}
+.listItemTop {
+  height: 60%;
+  width: 100%;
+}
+.listItemBottom {
+  width: 100%;
+  height: 40%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fontStyle {
+  font-size: 12px;
+  color: #ccc;
+}
+.listItemBtn {
+  color: #1d91ec;
+  font-size: 12px;
+}
+.tplNameContainer {
+  height: 18px;
+  line-height: 18px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  word-break: break-all;
+}
+.descriptionContainer {
+  height: 32px;
+  line-height: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+}

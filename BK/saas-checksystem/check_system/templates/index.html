@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> {{ APP_CODE }} </title>
+    <link rel="stylesheet" href="https://magicbox.bk.tencent.com/static_api/v3/components_vue/2.0/bk-magic-vue.css">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+    <style>
+        #app {
+            width: 90%;
+            max-width: 1366px;
+            margin: 20px auto 0 auto;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="navbar king-horizontal-nav1" style="min-width:768px;">
+        <div class="navbar-container">
+            <div class="navbar-header pull-left">
+                <a class="navbar-brand" href="#">
+                    <img src="https://magicbox.bk.tencent.com/static_api/v3/bk/images/logo.png" class="logo">
+                </a>
+            </div>
+            <ul class="nav navbar-nav pull-left">
+                <li class="active"><a href="{{ SITE_URL }}">巡检测试</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% verbatim %}
+<div id="app">
+    <bk-table :data="tpl_list">
+        <bk-table-column type="selection" width="60"></bk-table-column>
+        <bk-table-column label="模板名称" prop="tpl_name"></bk-table-column>
+        <bk-table-column label="模板系统" prop="tpl_os"></bk-table-column>
+        <bk-table-column label="操作">
+            <template slot-scope="scope">
+                <bk-button theme="primary" size="small" @click="fetch_quota_list(scope.row.id)">查看指标</bk-button>
+                <bk-button theme="success" size="small" @click="add_quota(scope.row.id, scope.row.tpl_os)">新增指标
+                </bk-button>
+                <bk-button theme="warning" size="small" @click="execute_tpl(scope.row.id)">执行</bk-button>
+            </template>
+        </bk-table-column>
+    </bk-table>
+    <hr>
+
+    <bk-table :data="host_list" @selection-change="host_selection_change">
+        <bk-table-column type="selection" width="60"></bk-table-column>
+        <bk-table-column label="主机名" prop="bk_host_name" width="150"></bk-table-column>
+        <bk-table-column label="内网IP" prop="bk_host_innerip" width="150"></bk-table-column>
+        <bk-table-column label="MAC" prop="bk_mac" width="150"></bk-table-column>
+        <bk-table-column label="系统" width="200">
+            <template slot-scope="scope">
+                {{ scope.row.bk_os_name }} {{ scope.row.bk_os_version }}@{{ scope.row.bk_os_bit }}
+            </template>
+        </bk-table-column>
+        <bk-table-column label="配置" width="250">
+            <template slot-scope="scope">
+                {{ scope.row.bk_cpu }}核@{{ (scope.row.bk_cpu_mhz/1024).toFixed(2) }}GHz
+                {{ (scope.row.bk_mem/1024).toFixed(2) }}G内存
+                {{ (scope.row.bk_disk).toFixed(2) }}G磁盘
+            </template>
+        </bk-table-column>
+        <bk-table-column label="云区域">
+            <template slot-scope="scope">
+                {{ scope.row.bk_cloud_id.map(c=>c.bk_inst_name+"(id:"+c.id+")").join('|') }}
+            </template>
+        </bk-table-column>
+    </bk-table>
+
+    <hr>
+
+    <bk-table :data="task_list">
+        <bk-table-column label="任务名称" prop="task_name"></bk-table-column>
+        <bk-table-column label="任务模板" prop="task_tpl"></bk-table-column>
+        <bk-table-column label="执行用户" prop="task_op"></bk-table-column>
+        <bk-table-column label="执行主机" width="120">
+            <template slot-scope="scope">
+                <textarea cols="12" style="background:#000;color:#fff;resize:none;">{{ scope.row.exec_hosts.split(',').join('\n') }}</textarea>
+            </template>
+        </bk-table-column>
+        <bk-table-column label="执行用户名" prop="exec_acc"></bk-table-column>
+        <bk-table-column label="执行计划" prop="exec_schedule"></bk-table-column>
+        <bk-table-column label="执行进度">
+            <template slot-scope="scope">
+                <bk-progress :text-inside="true"
+                             :stroke-width='18'
+                             :percent="scope.row.exec_progress/scope.row.exec_quota_total"
+                             :theme="scope.row.exec_state<=2?'success':'danger'"></bk-progress>
+            </template>
+        </bk-table-column>
+        <bk-table-column label="时间" width="150" prop="start_time"></bk-table-column>
+        <bk-table-column label="时间" width="150" prop="end_time"></bk-table-column>
+        <bk-table-column label="通知类型" prop="notify_type" width="80"></bk-table-column>
+        <bk-table-column label="通知用户信息" prop="notify_receiver" width="150"></bk-table-column>
+        <bk-table-column label="操作" width="120">
+            <template slot-scope="scope">
+                <bk-button theme="primary" size="small" @click="fetch_report(scope.row.id)">查看报告</bk-button>
+            </template>
+        </bk-table-column>
+    </bk-table>
+
+    <bk-dialog v-model="add_quota_dialog_visible" theme="primary" title="新增指标" :show-footer="false">
+        <bk-form :label-width="80">
+            <bk-form-item label="指标名称">
+                <bk-input v-model="temp_add_quota.quota_name"></bk-input>
+            </bk-form-item>
+            <bk-form-item label="指标系统">
+                <bk-input v-model="temp_add_quota.quota_os" :disabled="true"></bk-input>
+            </bk-form-item>
+            <bk-form-item label="脚本类型">
+                <bk-select v-model="temp_add_quota.script_type">
+                    <bk-option v-for="script in script_types" :key="script.id" :id="script.id"
+                               :name="script.name"></bk-option>
+                </bk-select>
+            </bk-form-item>
+            <bk-form-item label="脚本内容">
+                <bk-input :type="'textarea'" :rows="3" v-model="temp_add_quota.script_content">
+                </bk-input>
+            </bk-form-item>
+            <bk-form-item label="对比方式">
+                <bk-select v-model="temp_add_quota.quota_handler">
+                    <bk-option v-for="h in handlers" :key="h.val" :id="h.val" :name="h.name"></bk-option>
+                </bk-select>
+            </bk-form-item>
+            <bk-form-item label="对比值">
+                <bk-input v-model="temp_add_quota.quota_threshold"></bk-input>
+            </bk-form-item>
+            <bk-form-item>
+                <bk-button ext-cls="mr5" theme="primary" @click="add_quota_click">提交</bk-button>
+            </bk-form-item>
+        </bk-form>
+    </bk-dialog>
+
+    <bk-dialog v-model="quota_list_visible" theme="primary" title="指标列表"
+               :show-footer="false" width="1200">
+        <bk-table :data="quata_list">
+            <bk-table-column label="指标名称" prop="quota_name" width="200"></bk-table-column>
+            <bk-table-column label="指标系统" prop="quota_os" width="150"></bk-table-column>
+            <bk-table-column label="日志处理器" prop="quota_handler" width="150"></bk-table-column>
+            <bk-table-column label="比较值" prop="quota_threshold" width="150"></bk-table-column>
+            <bk-table-column label="脚本类型" width="120">
+                <template slot-scope="scope">
+                    {{ script_types.find(t=>t.id===scope.row.script_type).name }}
+                </template>
+            </bk-table-column>
+            <bk-table-column label="脚本内容" prop="script_content" width="380"></bk-table-column>
+        </bk-table>
+    </bk-dialog>
+
+    <bk-dialog v-model="report_visible" theme="primary" title="巡检报告" :show-footer="false" width="1200">
+        <bk-collapse>
+            <bk-collapse-item v-for="r in report" :name="r.quota_name">
+                {{ r.quota_name }}
+                <div slot="content">
+                    <bk-table :data="r.result">
+                        <bk-table-column label="主机IP" prop="ip"></bk-table-column>
+                        <bk-table-column label="巡检值" prop="val"></bk-table-column>
+                        <bk-table-column label="对比值" prop="threshold"></bk-table-column>
+                        <bk-table-column label="报警">
+                            <template slot-scope="scope">{{ scope.row.warning?'异常':'正常' }}</template>
+                        </bk-table-column>
+                    </bk-table>
+                </div>
+            </bk-collapse-item>
+        </bk-collapse>
+    </bk-dialog>
+</div>
+{% endverbatim %}
+</body>
+</html>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.0/axios.min.js"></script>
+<script type="text/javascript">
+    var app_code = "{{ APP_CODE }}";			// 在蓝鲸系统里面注册的"应用编码"
+    var site_url = "{{ SITE_URL }}";			// app的url前缀,在ajax调用的时候，应该加上该前缀
+    var remote_static_url = "{{ REMOTE_STATIC_URL }}";   //远程资源链接，403页面需要，不要删除
+    var debug_mode = JSON.parse("{{ DEBUG }}");	// 是否调试模式
+
+    axios.defaults.headers.common['X-CSRFToken'] = "{{ csrf_token }}";
+    axios.defaults.headers.common['Content-Type'] = 'application/json;charset=utf-8';
+    axios.interceptors.response.use(res => res.data)
+</script>
+<script src="https://cdn.bootcss.com/vue/2.5.22/vue.js"></script>
+<script src="https://magicbox.bk.tencent.com/static_api/v3/components_vue/2.0/bk-magic-vue.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    tpl_list: [],
+                    add_quota_dialog_visible: false,
+                    temp_add_quota_tpl_id: 0,
+                    temp_add_quota: {},
+                    script_types: [
+                        {id: 1, name: "shell脚本"},
+                        {id: 2, name: "bat脚本"},
+                        {id: 3, name: "perl脚本"},
+                        {id: 4, name: "python脚本"},
+                        {id: 5, name: "Powershell脚本"}
+                    ],
+                    handlers: [
+                        {name: "数字大于", val: "cmp_integer_gt"},
+                        {name: "数字大于等于", val: "cmp_integer_gte"},
+                        {name: "数字小于", val: "cmp_integer_lt"},
+                        {name: "数字小于等于", val: "cmp_integer_lte"},
+                        {name: "数字等于", val: "cmp_integer_eq"},
+                        {name: "数字不等于", val: "cmp_integer_neq"},
+                        {name: "字符串等于", val: "cmp_string_eq"},
+                        {name: "字符串不等于", val: "cmp_string_neq"},
+                    ],
+                    quota_list_visible: false,
+                    quata_list: [],
+                    host_list: [],
+                    host_selection: [],
+                    task_list: [],
+                    report_visible: false,
+                    report: []
+                }
+            },
+            created: function () {
+                this.fetch_tpl_list()
+                this.fetch_host_list()
+                this.fetch_task_list()
+            },
+            methods: {
+                show_notify(theme, title, msg) {
+                    this.$bkNotify({title: title, message: msg, theme: theme})
+                },
+                check_err(res) {
+                    if (!res.result) {
+                        this.show_notify("error", "请求错误", res.message)
+                        return false
+                    }
+                    return true
+                },
+                make_table_data(quota_name, report_result) {
+                    let table_data = []
+
+                    report_result = JSON.parse(report_result)
+                    for (let ip in report_result) {
+                        table_data.push({
+                            ip: ip,
+                            val: report_result[ip][quota_name],
+                            warning: report_result[ip][quota_name + "_warning"]
+                        })
+                    }
+
+                    console.log(table_data)
+
+                    return
+                },
+                async fetch_tpl_list() {
+                    const res = await axios({
+                        url: site_url + 'api/fetch_tpl_list',
+                        method: 'get'
+                    })
+
+                    if (!this.check_err(res)) return
+
+                    this.tpl_list = res.data
+                },
+                async fetch_task_list() {
+                    const res = await axios({
+                        url: site_url + 'api/fetch_task_list',
+                        method: 'get'
+                    })
+
+                    if (!this.check_err(res)) return
+
+                    this.task_list = res.data
+                },
+                async fetch_host_list() {
+                    const res = await axios({
+                        url: site_url + 'api/fetch_host_list',
+                        method: 'get'
+                    })
+
+                    if (!this.check_err(res)) return
+
+                    this.host_list = res.data
+                },
+                async fetch_quota_list(tpl_id) {
+                    const res = await axios({
+                        url: site_url + 'api/fetch_quota_list',
+                        method: 'get',
+                        params: {
+                            tpl_id: tpl_id
+                        }
+                    })
+
+                    if (!this.check_err(res)) return
+
+                    this.quata_list = res.data
+                    this.quota_list_visible = true
+                },
+                async add_quota(tpl_id, os) {
+                    this.temp_add_quota_tpl_id = tpl_id
+                    this.add_quota_dialog_visible = true
+                    this.temp_add_quota = {
+                        quota_os: os,
+                        script_type: 1,
+                        quota_handler: "cmp_integer_gt",
+                        quota_threshold: "0",
+                    }
+                },
+                async add_quota_click() {
+                    this.temp_add_quota.tpl_id = this.temp_add_quota_tpl_id
+                    const res = await axios({
+                        url: site_url + 'api/add_quota',
+                        method: 'post',
+                        data: this.temp_add_quota
+                    })
+
+                    if (!this.check_err(res)) return
+
+                    this.show_notify('success', '创建指标', '创建成功并配置给当前模板')
+                    this.add_quota_dialog_visible = false
+                },
+                async execute_tpl(tpl_id) {
+                    if (this.host_selection.length < 1) {
+                        this.show_notify('warning', '执行模板', '请在下面的主机列表至少选择一个主机')
+                        return
+                    }
+
+                    this.$bkInfo({
+                        title: '确认要执行模板?',
+                        confirmLoading: true,
+                        confirmFn: async () => {
+                            const res = await axios({
+                                url: site_url + 'api/execute_tpl',
+                                method: 'post',
+                                data: {
+                                    tpl_id: tpl_id,
+                                    ip_list: this.host_selection.map(h => h.bk_host_innerip).join(',')
+                                }
+                            })
+
+                            if (!this.check_err(res)) return
+
+                            this.show_notify('success', '执行模板', '开始后台执行模板任务')
+                            return true
+                        }
+                    })
+                },
+                async host_selection_change(selection) {
+                    this.host_selection = selection
+                },
+                async fetch_report(task_id) {
+                    const res = await axios({
+                        url: site_url + 'api/fetch_report',
+                        method: 'post',
+                        data: {
+                            task_id: task_id
+                        }
+                    })
+
+                    if (!this.check_err(res)) return
+                    this.report = res.data
+                    this.report_visible = true
+                }
+            }
+        })
+    }
+</script>

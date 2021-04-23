@@ -1,0 +1,938 @@
+{
+    "公共组件": [
+        {
+            "consul": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "consul",
+                    "bk_module_id": 52
+                },
+                {
+                    "bk_host_innerip": "10.0.6.24",
+                    "bk_host_id": 2,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "consul",
+                    "bk_module_id": 52
+                },
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "consul",
+                    "bk_module_id": 52
+                }
+            ]
+        },
+        {
+            "redis": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "redis",
+                    "bk_module_id": 60
+                }
+            ]
+        },
+        {
+            "elasticsearch": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "elasticsearch",
+                    "bk_module_id": 53
+                }
+            ]
+        },
+        {
+            "nginx": [
+                {
+                    "bk_host_innerip": "10.0.6.24",
+                    "bk_host_id": 2,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "nginx",
+                    "bk_module_id": 58
+                }
+            ]
+        },
+        {
+            "consul-template": [
+                {
+                    "bk_host_innerip": "10.0.6.24",
+                    "bk_host_id": 2,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "consul-template",
+                    "bk_module_id": 62
+                },
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "consul-template",
+                    "bk_module_id": 62
+                }
+            ]
+        },
+        {
+            "rabbitmq": [
+                {
+                    "bk_host_innerip": "10.0.6.24",
+                    "bk_host_id": 2,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "rabbitmq",
+                    "bk_module_id": 59
+                }
+            ]
+        },
+        {
+            "mongodb": [
+                {
+                    "bk_host_innerip": "10.0.6.24",
+                    "bk_host_id": 2,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "mongodb",
+                    "bk_module_id": 56
+                }
+            ]
+        },
+        {
+            "influxdb": [
+                {
+                    "bk_host_innerip": "10.0.6.24",
+                    "bk_host_id": 2,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "influxdb",
+                    "bk_module_id": 54
+                }
+            ]
+        },
+        {
+            "beanstalk": [
+                {
+                    "bk_host_innerip": "10.0.6.24",
+                    "bk_host_id": 2,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "beanstalk",
+                    "bk_module_id": 51
+                }
+            ]
+        },
+        {
+            "mysql": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "mysql",
+                    "bk_module_id": 57
+                }
+            ]
+        },
+        {
+            "zookeeper": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "zookeeper",
+                    "bk_module_id": 61
+                }
+            ]
+        },
+        {
+            "kafka": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 10,
+                    "bk_set_name": "公共组件",
+                    "bk_module_name": "kafka",
+                    "bk_module_id": 55
+                }
+            ]
+        }
+    ],
+    "管控平台": [
+        {
+            "license": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 8,
+                    "bk_set_name": "管控平台",
+                    "bk_module_name": "license",
+                    "bk_module_id": 37
+                }
+            ]
+        },
+        {
+            "gse_api": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 8,
+                    "bk_set_name": "管控平台",
+                    "bk_module_name": "gse_api",
+                    "bk_module_id": 29
+                }
+            ]
+        },
+        {
+            "gse_task": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 8,
+                    "bk_set_name": "管控平台",
+                    "bk_module_name": "gse_task",
+                    "bk_module_id": 35
+                }
+            ]
+        },
+        {
+            "gse_btsvr": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 8,
+                    "bk_set_name": "管控平台",
+                    "bk_module_name": "gse_btsvr",
+                    "bk_module_id": 31
+                }
+            ]
+        },
+        {
+            "gse_data": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 8,
+                    "bk_set_name": "管控平台",
+                    "bk_module_name": "gse_data",
+                    "bk_module_id": 32
+                }
+            ]
+        },
+        {
+            "gse_dba": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 8,
+                    "bk_set_name": "管控平台",
+                    "bk_module_name": "gse_dba",
+                    "bk_module_id": 33
+                }
+            ]
+        },
+        {
+            "gse_alarm": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 8,
+                    "bk_set_name": "管控平台",
+                    "bk_module_name": "gse_alarm",
+                    "bk_module_id": 30
+                }
+            ]
+        },
+        {
+            "gse_syncdata": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 8,
+                    "bk_set_name": "管控平台",
+                    "bk_module_name": "gse_syncdata",
+                    "bk_module_id": 36
+                }
+            ]
+        },
+        {
+            "gse_proc": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 8,
+                    "bk_set_name": "管控平台",
+                    "bk_module_name": "gse_proc",
+                    "bk_module_id": 34
+                }
+            ]
+        }
+    ],
+    "用户认证平台": [
+        {
+            "bk-iam": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 5,
+                    "bk_set_name": "用户认证平台",
+                    "bk_module_name": "bk-iam",
+                    "bk_module_id": 15
+                }
+            ]
+        },
+        {
+            "bk-ssm": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 5,
+                    "bk_set_name": "用户认证平台",
+                    "bk_module_name": "bk-ssm",
+                    "bk_module_id": 16
+                }
+            ]
+        },
+        {
+            "usermgr": [
+                {
+                    "bk_host_innerip": "10.0.6.23",
+                    "bk_host_id": 1,
+                    "bk_set_id": 5,
+                    "bk_set_name": "用户认证平台",
+                    "bk_module_name": "usermgr",
+                    "bk_module_id": 17
+                }
+            ]
+        }
+    ],
+    "PaaS平台": [
+        {
+            "appo": [
+                {
+                    "bk_host_innerip": "10.0.6.24",
+                    "bk_host_id": 2,
+                    "bk_set_id": 4,
+                    "bk_set_name": "PaaS平台",
+                    "bk_module_name": "appo",
+                    "bk_module_id": 13
+                }
+            ]
+        },
+        {
+            "paas": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 4,
+                    "bk_set_name": "PaaS平台",
+                    "bk_module_name": "paas",
+                    "bk_module_id": 9
+                }
+            ]
+        },
+        {
+            "appengine": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 4,
+                    "bk_set_name": "PaaS平台",
+                    "bk_module_name": "appengine",
+                    "bk_module_id": 8
+                }
+            ]
+        },
+        {
+            "esb": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 4,
+                    "bk_set_name": "PaaS平台",
+                    "bk_module_name": "esb",
+                    "bk_module_id": 10
+                }
+            ]
+        },
+        {
+            "login": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 4,
+                    "bk_set_name": "PaaS平台",
+                    "bk_module_name": "login",
+                    "bk_module_id": 11
+                }
+            ]
+        },
+        {
+            "apigw": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 4,
+                    "bk_set_name": "PaaS平台",
+                    "bk_module_name": "apigw",
+                    "bk_module_id": 12
+                }
+            ]
+        },
+        {
+            "appt": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 4,
+                    "bk_set_name": "PaaS平台",
+                    "bk_module_name": "appt",
+                    "bk_module_id": 14
+                }
+            ]
+        }
+    ],
+    "故障自愈": [
+        {
+            "fta-api": [
+                {
+                    "bk_host_innerip": "10.0.6.24",
+                    "bk_host_id": 2,
+                    "bk_set_id": 13,
+                    "bk_set_name": "故障自愈",
+                    "bk_module_name": "fta-api",
+                    "bk_module_id": 65
+                }
+            ]
+        }
+    ],
+    "配置平台": [
+        {
+            "cmdb-admin": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 9,
+                    "bk_set_name": "配置平台",
+                    "bk_module_name": "cmdb-admin",
+                    "bk_module_id": 38
+                }
+            ]
+        },
+        {
+            "cmdb-api": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 9,
+                    "bk_set_name": "配置平台",
+                    "bk_module_name": "cmdb-api",
+                    "bk_module_id": 39
+                }
+            ]
+        },
+        {
+            "cmdb-auth": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 9,
+                    "bk_set_name": "配置平台",
+                    "bk_module_name": "cmdb-auth",
+                    "bk_module_id": 40
+                }
+            ]
+        },
+        {
+            "cmdb-cloud": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 9,
+                    "bk_set_name": "配置平台",
+                    "bk_module_name": "cmdb-cloud",
+                    "bk_module_id": 41
+                }
+            ]
+        },
+        {
+            "cmdb-core": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 9,
+                    "bk_set_name": "配置平台",
+                    "bk_module_name": "cmdb-core",
+                    "bk_module_id": 42
+                }
+            ]
+        },
+        {
+            "cmdb-datacollection": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 9,
+                    "bk_set_name": "配置平台",
+                    "bk_module_name": "cmdb-datacollection",
+                    "bk_module_id": 43
+                }
+            ]
+        },
+        {
+            "cmdb-event": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 9,
+                    "bk_set_name": "配置平台",
+                    "bk_module_name": "cmdb-event",
+                    "bk_module_id": 44
+                }
+            ]
+        },
+        {
+            "cmdb-host": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 9,
+                    "bk_set_name": "配置平台",
+                    "bk_module_name": "cmdb-host",
+                    "bk_module_id": 45
+                }
+            ]
+        },
+        {
+            "cmdb-op": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 9,
+                    "bk_set_name": "配置平台",
+                    "bk_module_name": "cmdb-op",
+                    "bk_module_id": 46
+                }
+            ]
+        },
+        {
+            "cmdb-proc": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 9,
+                    "bk_set_name": "配置平台",
+                    "bk_module_name": "cmdb-proc",
+                    "bk_module_id": 47
+                }
+            ]
+        },
+        {
+            "cmdb-task": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 9,
+                    "bk_set_name": "配置平台",
+                    "bk_module_name": "cmdb-task",
+                    "bk_module_id": 48
+                }
+            ]
+        },
+        {
+            "cmdb-topo": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 9,
+                    "bk_set_name": "配置平台",
+                    "bk_module_name": "cmdb-topo",
+                    "bk_module_id": 49
+                }
+            ]
+        },
+        {
+            "cmdb-web": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 9,
+                    "bk_set_name": "配置平台",
+                    "bk_module_name": "cmdb-web",
+                    "bk_module_id": 50
+                }
+            ]
+        }
+    ],
+    "作业平台v3": [
+        {
+            "job-config": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 6,
+                    "bk_set_name": "作业平台v3",
+                    "bk_module_name": "job-config",
+                    "bk_module_id": 18
+                }
+            ]
+        },
+        {
+            "job-gateway": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 6,
+                    "bk_set_name": "作业平台v3",
+                    "bk_module_name": "job-gateway",
+                    "bk_module_id": 21
+                }
+            ]
+        },
+        {
+            "job-manage": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 6,
+                    "bk_set_name": "作业平台v3",
+                    "bk_module_name": "job-manage",
+                    "bk_module_id": 23
+                }
+            ]
+        },
+        {
+            "job-execute": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 6,
+                    "bk_set_name": "作业平台v3",
+                    "bk_module_name": "job-execute",
+                    "bk_module_id": 20
+                }
+            ]
+        },
+        {
+            "job-crontab": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 6,
+                    "bk_set_name": "作业平台v3",
+                    "bk_module_name": "job-crontab",
+                    "bk_module_id": 19
+                }
+            ]
+        },
+        {
+            "job-logsvr": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 6,
+                    "bk_set_name": "作业平台v3",
+                    "bk_module_name": "job-logsvr",
+                    "bk_module_id": 22
+                }
+            ]
+        },
+        {
+            "job-backup": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 6,
+                    "bk_set_name": "作业平台v3",
+                    "bk_module_name": "job-backup",
+                    "bk_module_id": 24
+                }
+            ]
+        }
+    ],
+    "节点管理": [
+        {
+            "nodeman-api": [
+                {
+                    "bk_host_innerip": "10.0.6.25",
+                    "bk_host_id": 3,
+                    "bk_set_id": 11,
+                    "bk_set_name": "节点管理",
+                    "bk_module_name": "nodeman-api",
+                    "bk_module_id": 63
+                }
+            ]
+        }
+    ],
+    "蓝盾": [
+        {
+            "ci-gateway": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-gateway",
+                    "bk_module_id": 70
+                }
+            ]
+        },
+        {
+            "ci-agentless": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-agentless",
+                    "bk_module_id": 72
+                }
+            ]
+        },
+        {
+            "ci-artifactory": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-artifactory",
+                    "bk_module_id": 73
+                }
+            ]
+        },
+        {
+            "ci-auth": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-auth",
+                    "bk_module_id": 74
+                }
+            ]
+        },
+        {
+            "ci-dispatch": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-dispatch",
+                    "bk_module_id": 75
+                }
+            ]
+        },
+        {
+            "ci-environment": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-environment",
+                    "bk_module_id": 76
+                }
+            ]
+        },
+        {
+            "ci-image": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-image",
+                    "bk_module_id": 77
+                }
+            ]
+        },
+        {
+            "ci-log": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-log",
+                    "bk_module_id": 78
+                }
+            ]
+        },
+        {
+            "ci-misc": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-misc",
+                    "bk_module_id": 79
+                }
+            ]
+        },
+        {
+            "ci-notify": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-notify",
+                    "bk_module_id": 80
+                }
+            ]
+        },
+        {
+            "ci-openapi": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-openapi",
+                    "bk_module_id": 81
+                }
+            ]
+        },
+        {
+            "ci-plugin": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-plugin",
+                    "bk_module_id": 82
+                }
+            ]
+        },
+        {
+            "ci-process": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-process",
+                    "bk_module_id": 83
+                }
+            ]
+        },
+        {
+            "ci-project": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-project",
+                    "bk_module_id": 84
+                }
+            ]
+        },
+        {
+            "ci-quality": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-quality",
+                    "bk_module_id": 85
+                }
+            ]
+        },
+        {
+            "ci-repository": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-repository",
+                    "bk_module_id": 86
+                }
+            ]
+        },
+        {
+            "ci-store": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-store",
+                    "bk_module_id": 87
+                }
+            ]
+        },
+        {
+            "ci-ticket": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-ticket",
+                    "bk_module_id": 88
+                }
+            ]
+        },
+        {
+            "ci-websocket": [
+                {
+                    "bk_host_innerip": "10.0.6.33",
+                    "bk_host_id": 10,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-websocket",
+                    "bk_module_id": 89
+                }
+            ]
+        },
+        {
+            "ci-dockerhost": [
+                {
+                    "bk_host_innerip": "10.0.6.34",
+                    "bk_host_id": 11,
+                    "bk_set_id": 16,
+                    "bk_set_name": "蓝盾",
+                    "bk_module_name": "ci-dockerhost",
+                    "bk_module_id": 71
+                }
+            ]
+        }
+    ],
+    "空闲机池": [
+        {
+            "空闲机": [
+                {
+                    "bk_host_innerip": "10.0.6.29",
+                    "bk_host_id": 16,
+                    "bk_set_id": 2,
+                    "bk_set_name": "空闲机池",
+                    "bk_module_name": "空闲机",
+                    "bk_module_id": 3
+                }
+            ]
+        }
+    ]
+}
+
+# sudo yum install oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm
+
+121.37.133.196 2433 root tencent@

@@ -1,0 +1,240 @@
+{% include 'index.html' %}
+{% block content %}
+{% verbatim %}
+<div id="app">
+    <div style="border:1px solid white;width: 20%;float: left;margin-right: 20px;height: 800px">
+        <div style="margin: 20px">
+            选择业务
+            <bk-select v-model="businessValue" style="width: 250px;" @change="search_topo">
+                <bk-option class="custom-option"
+                    v-for="option in bus_list"
+                    :key="option.bk_biz_id"
+                    :id="option.bk_biz_id"
+                    :name="option.bk_biz_name">
+                    <span>{{option.bk_biz_name}}</span>
+                </bk-option>
+            </bk-select>
+        </div>
+
+        <div style="margin: 10px">
+            选择拓扑
+            <bk-tree
+                ref="tree2"
+                :data="treeListTwo"
+                :show-icon="false"
+                :node-key="'id'"
+                :has-border="true"
+                @on-click="nodeClickTwo">
+            </bk-tree>
+        </div>
+
+    </div>
+
+
+    <div style="border:1px solid white;width: 75%;float: left;height: 800px;background-color: #ecece9 ">
+        <div style="border:1px solid white;width: 95%;height: 200px;margin: 30px;background-color: white">
+            <div style="float: left;margin-top: 10px;margin-left: 10px">主机IP</div>
+            <div class="input-demo" style="width: 90%;margin: 18px;float: left;">
+                <bk-input
+                    placeholder="请输入IP地址，多个IP，用逗号隔开"
+                    :type="'textarea'"
+                    :rows="3"
+                    :maxlength="1000"
+                    v-model="ipValue">
+                </bk-input>
+            </div>
+            <div style="float: left;margin: 15px">目录</div>
+            <div style="width: 30%;float: left;margin: 10px"><bk-input :clearable="true" v-model="dirValue"></bk-input></div>
+            <div style="float: left;margin-left: 30px;margin-top: 15px">文件名</div>
+            <div style="width: 30%;float: left;margin: 10px"><bk-input :clearable="true" v-model="fileValue"></bk-input></div>
+            <div style="float: left;margin-left: 15px;margin-top: 10px"><bk-button title="success" theme="success" class="mr10" @click="execute_script">立即搜索</bk-button></div>
+        </div>
+        <div style="border:1px solid white;width: 95%;margin: 30px;background-color: white">
+            <bk-table style="margin-top: 15px;"
+            :data="data"
+            border>
+            <bk-table-column type="index" label="序号" width="60"></bk-table-column>
+            <bk-table-column label="IP" prop="ip"></bk-table-column>
+            <bk-table-column label="文件列表" prop="file"></bk-table-column>
+            <bk-table-column label="文件数量" prop="count"></bk-table-column>
+            <bk-table-column label="文件总大小" prop="size" >
+                <template slot-scope="scope">
+                    {{ scope.row.size }}M
+                </template>
+            </bk-table-column>
+            <bk-table-column label="操作" prop="create_time" >
+                <template slot-scope="scope">
+                    <bk-button  v-if="scope.row.size > 0" size="small" theme="default" class="mr10" @click="execute_backup(scope.row)">立即备份</bk-button>
+                </template>
+            </bk-table-column>
+        </bk-table>
+        </div>
+    </div>
+    <div v-if="textLoading" style="height: 800px;
+         line-height: 300px;
+         border: 1px solid #eee;
+         text-align: center;"
+         v-bkloading="{ isLoading: true, title: '正在搜索...', zIndex: 10 }">
+    </div>
+    <div v-if="textLoadingBack" style="height: 800px;
+         line-height: 300px;
+         border: 1px solid #eee;
+         text-align: center;"
+         v-bkloading="{ isLoading: true, title: '正在备份...', zIndex: 10 }">
+    </div>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% block script %}
+<script>
+    window.onload = function () {
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    ipValue:"",
+                    dirValue:"",
+                    fileValue:"",
+                    businessValue: "",
+                    bus_list: [],
+                    data: [],
+                    treeListTwo: [],
+                    textLoading: false,
+                    textLoadingBack: false
+
+                }
+            },
+            mounted() {
+                this.Business();
+            },
+            methods: {
+                // 获取业务
+                Business() {
+                    axios({
+                        url: site_url + "business",
+                        method: 'GET'
+                    }).then(res => {
+                        this.bus_list = res.data['data']
+                    })
+                },
+
+                search_topo() {
+                    axios({
+                        url: site_url + "search_topo",
+                        method: 'GET',
+                        params:{'biz_id': this.businessValue}
+                    }).then(res => {
+                        this.treeListTwo = res.data.data
+
+                    })
+                },
+
+                nodeClickTwo (node) {
+                    {#查询拓扑节点下的主机#}
+                    try{
+                        if(node.bk_obj_id !== "biz"){
+                            const bk_biz_id = this.businessValue;
+                            const bk_obj_id = node.bk_obj_id;
+                            const bk_inst_id = node.id;
+
+                            axios({
+                                url: site_url + "list_topo_hosts",
+                                method: 'GET',
+                                params:{'bk_biz_id': bk_biz_id, 'bk_obj_id': bk_obj_id, 'bk_inst_id': bk_inst_id}
+                                }).then(res => {
+                                    this.ipValue = res.data.data
+                                })
+                            }
+                    }catch (e) {
+                        console.log()
+                    }
+
+                },
+
+                // 快速执行查找文件
+                execute_script() {
+                    if(this.ipValue && this.dirValue && this.fileValue && this.businessValue){
+                        this.textLoading = true
+                        axios({
+                            url: site_url + "fast_exce_script",
+                            method: 'GET',
+                            params:{'ips': this.ipValue, 'direct': this.dirValue, 'file_name': this.fileValue, 'bk_biz_id': this.businessValue}
+                            }).then(res => {
+                                {#console.log(res)#}
+                                this.data = res.data.data
+                                this.textLoading = false
+
+                            })
+                    }else{
+                        alert("IP、目录、文件、业务均为必填项！")
+                    }
+                },
+
+                // li立即备份
+                execute_backup(obj) {
+                    if(this.ipValue && this.dirValue && this.fileValue && this.businessValue){
+                        this.textLoadingBack = true
+                        axios({
+                            url: site_url + "execute_backup",
+                            method: 'GET',
+                            params:{'ip': obj.ip, 'direct': this.dirValue, 'file_name': this.fileValue, 'bk_biz_id': this.businessValue,
+                                    'file': obj.file, 'count': obj.count, 'size': obj.size, }
+                            }).then(res => {
+                                this.textLoadingBack = false
+                                if(res.data.code > 0){
+                                    this.errorInfoBox()
+                                }else{
+                                    this.successInfoBox()
+                                }
+                            })
+                    }else{
+                        alert("IP、目录、文件、业务均为必填项！")
+                    }
+                },
+                successInfoBox () {
+                    const a = this.$bkInfo({
+                        type: 'success',
+                        title: '备份成功',
+                        subTitle: '此窗口3秒后关闭',
+                        showFooter: false
+                    })
+
+                    let num = 3
+                    let t = setInterval(() => {
+                        a.subTitle = `此窗口${--num}秒后关闭`
+                        if (num === 0) {
+                            clearInterval(t)
+                            a.close()
+                        }
+                    }, 1000)
+                },
+
+                errorInfoBox () {
+                    const a = this.$bkInfo({
+                        type: 'error',
+                        title: '备份失败',
+                        subTitle: '此窗口3秒后关闭',
+                        showFooter: false
+                    })
+
+                    let num = 3
+                    let t = setInterval(() => {
+                        a.subTitle = `此窗口${--num}秒后关闭`
+                        if (num === 0) {
+                            clearInterval(t)
+                            a.close()
+                        }
+                    }, 1000)
+                }
+
+            }
+        })
+    }
+</script>
+<style lang="postcss">
+
+</style>
+{% endblock %}
+
+
